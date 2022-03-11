@@ -1,0 +1,184 @@
+body {
+    background-color: #8c7ae6;
+    /*https://flatuicolors.com/palette/gb*/
+    color: #21252c;
+    text-align: center;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+
+/*General*/
+
+.flex-align {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+ul,
+li {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*Task form*/
+
+.task-form {
+    background-color: #ffffff;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #0a3d62;
+    border-bottom: none;
+    height: 50px;
+    gap: 10px;
+}
+
+.task-form>input {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+
+.task-form>input:focus {
+    outline: none;
+}
+
+.task-form>input::placeholder {
+    font-style: italic;
+}
+
+.task-form>.icon {
+    font-size: 20px;
+    color: #0a3d62;
+}
+
+
+/*list index.js*/
+
+.container {
+    flex-direction: column;
+}
+
+.tasks-list {
+    background-color: #dcdde1;
+    width: 500px;
+    border: 2px solid #0a3d62;
+    border-top: none;
+    border-bottom: none;
+}
+
+.task-item {
+    width: 100%;
+    justify-content: left;
+    gap: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #888888;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.done {
+    background-color: #4cd137;
+}
+
+.task-text {
+    text-align: left;
+    inline-size: 90%;
+    overflow-wrap: break-word;
+}
+
+.delete-icon:hover {
+    transform: scale(1.1);
+    color: #e84118;
+    cursor: pointer;
+}
+
+.bottom {
+    font-size: 14px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.bottom-btn {
+    cursor: pointer;
+}
+
+.bottom-btn:hover {
+    transform: scale(0.95);
+}
+
+.tasks-bottom {
+    width: 500px;
+    background-color: #dcdde1;
+    border: 2px solid #0a3d62;
+    border-top: none;
+}
+
+.tasks-bottom>.wrapper {
+    justify-content: space-between;
+    padding: 0px 12px;
+}
+
+.bottom-middle {
+    gap: 12px;
+    padding: 2px;
+}
+
+
+/*RESPONSIVENESS */
+
+@media(max-width: 768px) {
+    .task-form {
+        width: 300px;
+        height: 40px;
+        gap: 10px;
+    }
+    .task-form>input {
+        font-size: 16px;
+    }
+    .task-form>.icon {
+        font-size: 18px;
+    }
+    .tasks-list {
+        width: 300px;
+    }
+    .task-item {
+        width: 100%;
+        gap: 6px;
+        font-size: 14px;
+    }
+    .task-text {
+        inline-size: 90%;
+    }
+    .bottom {
+        font-size: 12px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+    .tasks-bottom {
+        width: 300px;
+    }
+    .bottom-middle {
+        gap: 6px;
+        padding: 2px;
+    }
+}
